@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+    face_detect&
+    sleep 1
+    ;;
+  stop)
+    killall face_detect
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+    ;;
+esac
+exit 0
